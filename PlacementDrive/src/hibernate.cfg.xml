@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="dialect">org.hibernate.dialect.Oracle9Dialect</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="connection.username">morning</property>
+		<property name="connection.password">admin</property>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="show_sql">true</property>
+		<mapping class="model.to.LoginInfo" />
+		<mapping class="model.to.CompanyInfo" />
+		<mapping class="model.to.BranchInfo" />
+		<mapping class="model.to.PlacementInfo" />
+		<mapping class="model.to.PlacementCriteria" />
+		<mapping class="model.to.QualificationInfo" />
+		<mapping class="model.to.StudentInfo" />
+		<mapping class="model.to.StudentPhoto" />
+		<mapping class="model.to.StudentPlaced" />
+		<mapping class="model.to.StudentQualification" />
+	</session-factory>
+</hibernate-configuration>
